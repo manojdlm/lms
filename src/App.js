@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+import SignInComponent  from './componant/student-page/student-sign-in'
 import './App.css';
+import Studentsignup from './componant/student-page/student-Sign-up'
+import Studentrestpassword from './componant/student-page/student-Reset-Password'
+import Studententerenewpassword from './componant/student-page/student-enter-newpassword'
+import Studentslider from './componant/student-page/std-menu'
+import Newclass from './componant/student-page/new-class'
+// import Stdmenu from './componant/student-page/std-menu'
+import { Route ,Routes } from 'react-router-dom';
+import Studentprofile from './componant/student-page/student-profile'
+import Studetndashbord from './componant/student-page/student-dashbord'
+import Studentfees from './componant/student-page/Student-feec'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/slider' element={<Studentslider></Studentslider> }/>
+      <Route path='/' element={<SignInComponent></SignInComponent>}/>
+      <Route path='/sign-up' element={<Studentsignup></Studentsignup>}/>
+      <Route path='/restpassword' element={<Studentrestpassword></Studentrestpassword>}/>
+      <Route path='/enterenewpassword' element={<Studententerenewpassword></Studententerenewpassword>}/>
+      <Route path='/student-dashbord' element={<Studetndashbord></Studetndashbord>}/>
+      <Route path='/student-profile' element= { <Studentprofile></Studentprofile>} ></Route>
+      <Route path='/student-fees' element ={<Studentfees></Studentfees>}></Route>
+    </Routes>
+    
+    // <div>
+    
+
+    //   {/* <Studentrestpassword></Studentrestpassword> */}
+    //   {/* <Studententerenewpassword></Studententerenewpassword> */}
+    //   {/* {/* <Studentslider></Studentslider> */}
+    //   {/* <Newclass></Newclass> */}
+    //   {/* <Stdmenu></Stdmenu> */}
+      
+    
+    // </div>
+   
+
+
+
+
   );
 }
 
